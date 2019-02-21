@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    {{ super() }}
+
+<div>
+        <h1 class="text_title" >Attacks Through Theft of Biometric Data</h1>
+        
+        <div class="text_normal">
+
+            <p style="margin-top: 50px;">While several major leaks of biometric data have already occurred globally, the Middle East and Africa regions could see the first attacks in the theft and use of biometric data in 2019, according to Kaspersky Lab.
+                "As more biometric systems for user identification and authentication are being implemented by various financial institutions in META (Middle East, Turkey and Africa), 2019 will see criminals exposing vulnerabilities in passcodes, touch ID sensors and facial recognition," says Fabio Assolini, senior security researcher at Kaspersky Lab.
+                "While many financial organisations consider these emerging biometric-based solutions to improve security over current authentication methods, biometric data will increasingly be used to steal sensitive information."</p>
+
+                <img src="static/data_loss.png" style="height: 100%; width: 100%"/>
+
+                <p>
+                        <h3 style="margin-top: 50px;">Risk Associated With Storing Biometric Data</h3>
+                        
+                        <dl style="margin-top: 50px; margin-bottom: 50px">
+                                <dt>Risk of data breaches and cyber security incidents</dt>
+                                <dd>- News of data breaches captures the headlines every now and then. Cyber criminals steal account information and even passwords of millions of users every year and despite the repeated events and improved cyber security measures, these incidents keep happening. When a data breach is identified, organizations intimate its users to change their passwords and update account recovery information; however, in case of biometric data, these countermeasures will not help. Biometric templates are secured with encryption and they cannot be reverse-engineered to generate the biometric patterns, however, history tells that all information security countermeasures fall short at some point of time.</dd>
+                                <dt>Risk to privacy and preferences</dt>
+                                <dd>- What if you stand by a digital display at a shopping mall and it starts showing you ads of a product you search online in the morning? You would probably think it to be a complete coincidence; however, looking at today’s technology, it may not be a coincidence. We have seen online advertisements following us on the web, all it takes is a search on a shopping website to make the products follow you. This approach was not possible for offline world, but now biometrics like face recognition is going to fill this gap.</dd>
+                                
+                        </dl>
+                    
+                    
+                    </p>
+
+                <p>
+                    <h3 style="margin-top: 50px;">Ways to Protect Your Identity</h3>
+                    
+                    <dl style="margin-top: 50px; margin-bottom: 50px">
+                            <dt>Multi-Factor and Multi-Modal Authentication</dt>
+                            <dd>- For strong and reliable user authentication, organizations should consider, where practical, multi-factor and even multi-modal authentication. Today’s authentication technologies enable solutions that can enhance security while replacing passwords and improving convenience in a seamless way that is non-intrusive tothe legitimate user. </dd>
+                            <dt>More Robust Biometric Templates</dt>
+                            <dd>- It may be desirable in some application-dependent situations to construct and enforce the use of enhanced biometric templates. The use of a "super template" that uniquely combines biometric data with other information —perhaps even an OTP or other out-of-band data —enables the system to recognize and reject a biometric template that was created from a stolen fingerprint image. Templates can reside on a card or chip or in a smartphone or personal wearable.</dd>
+                            <dt>Strong passwords</dt>
+                            <dd>- It means that it’s harder to steal your data by simply cracking your password. Keeping your biometric information in only a few, limited places gives hackers fewer places to breach your data.</dd>
+                    </dl>
+                
+                
+                </p>
+            
+        </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    {{ super() }}
+
+<div>
+        <h1 class="text_title" >DDoS Attacks</h1>
+        
+        <div class="text_normal">
+
+            <p style="margin-top: 50px;">A distributed denial of service (DDoS) attack is a malicious attempt to make an online service unavailable to users, usually by temporarily interrupting or suspending the services of its hosting server.
+                    A DDoS attack is launched from numerous compromised devices, often distributed globally in what is referred to as a botnet. It is distinct from other denial of service (DoS) attacks, in that it uses a single Internet-connected device (one network connection) to flood a target with malicious traffic. This nuance is the main reason for the existence of these two, somewhat different, definitions.
+                    <img src="static/ddos.jpg" style="height: 100%; width: 100%"/>
+           </p>
+
+                <p>
+                        <h3 style="margin-top: 50px;">DoS and DDoS Attacks Can Be Divided Into Three Types</h3>
+                        
+                        <dl style="margin-top: 50px; margin-bottom: 50px">
+                                <dt>Volume Based Attacks</dt>
+                                <dd>- Includes UDP floods, ICMP floods, and other spoofed-packet floods. The attack’s goal is to saturate the bandwidth of the attacked site, and magnitude is measured in bits per second (Bps).</dd>
+                                <dt>Protocol Attacks</dt>
+                                <dd>- Includes SYN floods, fragmented packet attacks, Ping of Death, Smurf DDoS and more. This type of attack consumes actual server resources, or those of intermediate communication equipment, such as firewalls and load balancers, and is measured in packets per second (Pps).</dd>
+                                <dt>Application Layer Attacks</dt>
+                                <dd>- Includes low-and-slow attacks, GET/POST floods, attacks that target Apache, Windows or OpenBSD vulnerabilities and more. Comprised of seemingly legitimate and innocent requests, the goal of these attacks is to crash the web server, and the magnitude is measured in Requests per second (Rps).</dd>
+                        </dl>
+                    
+                        
+                </p>
+
+                <p>
+                    <h3 style="margin-top: 50px;">Common DDoS Attacks</h3>
+                    
+                    <dl style="margin-top: 50px; margin-bottom: 50px">
+                            <dt>UDP Flood</dt>
+                            <dd>A UDP flood, by definition, is any DDoS attack that floods a target with User Datagram Protocol (UDP) packets. The goal of the attack is to flood random ports on a remote host. This causes the host to repeatedly check for the application listening at that port, and (when no application is found) reply with an ICMP ‘Destination Unreachable’ packet. This process saps host resources, which can ultimately lead to inaccessibility.</dd>
+
+                            <dt>ICMP (Ping) Flood</dt>
+                            <dd>Similar in principle to the UDP flood attack, an ICMP flood overwhelms the target resource with ICMP Echo Request (ping) packets, generally sending packets as fast as possible without waiting for replies. This type of attack can consume both outgoing and incoming bandwidth, since the victim’s servers will often attempt to respond with ICMP Echo Reply packets, resulting a significant overall system slowdown.</dd>
+
+                            <dt>SYN Flood</dt>
+                            <dd>A SYN flood DDoS attack exploits a known weakness in the TCP connection sequence (the “three-way handshake”), wherein a SYN request to initiate a TCP connection with a host must be answered by a SYN-ACK response from that host, and then confirmed by an ACK response from the requester. In a SYN flood scenario, the requester sends multiple SYN requests, but either does not respond to the host’s SYN-ACK response, or sends the SYN requests from a spoofed IP address. Either way, the host system continues to wait for acknowledgement for each of the requests, binding resources until no new connections can be made, and ultimately resulting in denial of service.</dd>
+
+                            <dt>Ping of Death</dt>
+                            <dd>A ping of death (“POD”) attack involves the attacker sending multiple malformed or malicious pings to a computer. The maximum packet length of an IP packet (including header) is 65,535 bytes. However, the Data Link Layer usually poses limits to the maximum frame size – for example 1500 bytes over an Ethernet network. In this case, a large IP packet is split across multiple IP packets (known as fragments), and the recipient host reassembles the IP fragments into the complete packet. In a Ping of Death scenario, following malicious manipulation of fragment content, the recipient ends up with an IP packet which is larger than 65,535 bytes when reassembled. This can overflow memory buffers allocated for the packet, causing denial of service for legitimate packets.</dd>
+
+                            <dt>Slowloris</dt>
+                            <dd>Slowloris is a highly-targeted attack, enabling one web server to take down another server, without affecting other services or ports on the target network. Slowloris does this by holding as many connections to the target web server open for as long as possible. It accomplishes this by creating connections to the target server, but sending only a partial request. Slowloris constantly sends more HTTP headers, but never completes a request. The targeted server keeps each of these false connections open. This eventually overflows the maximum concurrent connection pool, and leads to denial of additional connections from legitimate clients.</dd>
+
+                            <dt>NTP Amplification</dt>
+                            <dd>In NTP amplification attacks, the perpetrator exploits publically-accessible Network Time Protocol (NTP) servers to overwhelm a targeted server with UDP traffic. The attack is defined as an amplification assault because the query-to-response ratio in such scenarios is anywhere between 1:20 and 1:200 or more. This means that any attacker that obtains a list of open NTP servers (e.g., by a using tool like Metasploit or data from the Open NTP Project) can easily generate a devastating high-bandwidth, high-volume DDoS attack.</dd>
+
+                            <dt>HTTP Flood</dt>
+                            <dd>In an HTTP flood DDoS attack, the attacker exploits seemingly-legitimate HTTP GET or POST requests to attack a web server or application. HTTP floods do not use malformed packets, spoofing or reflection techniques, and require less bandwidth than other attacks to bring down the targeted site or server. The attack is most effective when it forces the server or application to allocate the maximum resources possible in response to each single request. </dd>
+                    </dl>
+                
+                
+                </p>
+
+                <p>
+                        <h3 style="margin-top: 50px;">Motivation Behind DDoS Attacks</h3>
+
+                        <p style="margin-top: 50px;">DDoS attacks are quickly becoming the most prevalent type of cyber threat, growing rapidly in the past year in both number and volume according to recent market research. The trend is towards shorter attack duration, but bigger packet-per-second attack volume.
+                        </p>
+
+                        <dl style="margin-top: 50px; margin-bottom: 50px">
+                                <dt>Ideology</dt>
+                                <dd>- So called “hacktivists” use DDoS attacks as a means of targeting websites they disagree with ideologically.</dd>
+                                <dt>Business Feuds</dt>
+                                <dd>- Businesses can use DDoS attacks to strategically take down competitor websites, e.g., to keep them from participating in a significant event, such as Cyber Monday.</dd>
+                                <dt>Cyber warfare</dt>
+                                <dd>- Government authorized DDoS attacks can be used to both cripple opposition websites and an enemy country’s infrastructure.</dd>
+                        </dl>
+                    
+                    
+                </p>
+
+                <p>
+                        <h3 style="margin-top: 50px;">DoS Attack Prevention</h3>
+                        
+                        <dl style="margin-top: 50px; margin-bottom: 50px">
+                                <dt>Antivirus And Firewall</dt>
+                                <dd>- Deploy an antivirus program and firewall into your network if not already done. This helps in restricting the bandwidth usage to authenticated users only.</dd>
+                                <dt>Server Configuration</dt>
+                                <dd>- Server configuration can help diminish the probability of being attacked. If you’re a network administrator at some firm, take a look at your network configurations and harden the firewall policies to block out unauthenticated users from addressing the server’s resources.</dd>
+                                <dt>Third Party Services</dt>
+                                <dd>- Some third party services offer guidance and protection against DoS attacks. These can be expensive but effective as well. If you have the capital to deploy such services in your network, better get going.</dd>
+                        </dl>
+                    
+                    
+                </p>
+            
+        </div>
+
+</div>
+
+{% endblock %}

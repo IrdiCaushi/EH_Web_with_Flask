@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+    {{ super() }}
+
+<div>
+        <h1 class="text_title" >RANSOMWARE</h1>
+        
+        <div class="text_normal">
+
+            <p style="margin-top: 50px;">Ransomware is a form of malicious software (or malware) that, once it's taken over your computer, threatens you with harm, usually by denying you access to your data. The attacker demands a ransom from the victim, promising — not always truthfully — to restore access to the data upon payment. 
+
+                    Users are shown instructions for how to pay a fee to get the decryption key. The costs can range from a few hundred dollars to thousands, payable to cybercriminals in Bitcoin.</p>
+
+                <p>
+                        <h3 style="margin-top: 50px;">How Ransomware Works</h3>
+                        
+                        <p style="margin-top: 50px; margin-bottom: 50px">
+                                There are a number of vectors ransomware can take to access a computer. One of the most common delivery systems is phishing spam — attachments that come to the victim in an email, masquerading as a file they should trust. Once they're downloaded and opened, they can take over the victim's computer, especially if they have built-in social engineering tools that trick users into allowing administrative access. Some other, more aggressive forms of ransomware, like NotPetya, exploit security holes to infect computers without needing to trick users.
+                                There are several things the malware might do once it’s taken over the victim's computer, but by far the most common action is to encrypt some or all of the user's files. If you want the technical details, the Infosec Institute has a great in-depth look at how several flavors of ransomware encrypt files. But the most important thing to know is that at the end of the process, the files cannot be decrypted without a mathematical key known only by the attacker. The user is presented with a message explaining that their files are now are now inaccessible and will only be decrypted if the victim sends an untraceable Bitcoin payment to the attacker.
+                                In some forms of malware, the attacker might claim to be a law enforcement agency shutting down the victim's computer due to the presence of pornography or pirated software on it, and demanding the payment of a "fine," perhaps to make victims less likely to report the attack to authorities. But most attacks don't bother with this pretense. There is also a variation, called leakware or doxware, in which the attacker threatens to publicize sensitive data on the victim's hard drive unless a ransom is paid. But because finding and extracting such information is a very tricky proposition for attackers, encryption ransomware is by far the most common type.                                   
+                        </p>
+                    
+                        <img src="static/ransomware.jpg" style="height: 100%; width: 100%"/>
+                </p>
+
+                <p>
+                    <h3 style="margin-top: 50px;">Ways to Prevent Ransomware</h3>
+                    
+                    <dl style="margin-top: 50px; margin-bottom: 50px">
+                            
+                            <dd>- Keep your operating system patched and up-to-date to ensure you have fewer vulnerabilities to exploit. </dd>
+                            
+                            <dd>- Don't install software or give it administrative privileges unless you know exactly what it is and what it does.</dd>
+                            
+                            <dd>- Install antivirus software, which detects malicious programs like ransomware as they arrive, and whitelisting software, which prevents unauthorized applications from executing in the first place.</dd>
+
+                            <dd>- And, of course, back up your files, frequently and automatically! That won't stop a malware attack, but it can make the damage caused by one much less significant.</dd>
+                    </dl>
+                
+                
+                </p>
+
+                <p>
+                        <h3 style="margin-top: 50px; margin-bottom: 50px">Ransomware Examples</h3>
+
+                        <p>While ransomware has technically been around since the '90s, it's only in the past five years or so that it's really taken off, largely because of the availability of untraceable payment methods like Bitcoin. Some of the worst offenders have been:</p>
+                        
+                        <dl style="margin-top: 50px; margin-bottom: 50px">
+                                
+                                <dd>- CryptoLocker, a 2013 attack that launched the modern ransomware age and infected up to 500,000 machines at its height </dd>
+                                
+                                <dd>- TeslaCrypt, which targeted gaming files and saw constant improvement during its reign of terror.</dd>
+                                
+                                <dd>- SimpleLocker, the first widespread ransomware attack that focused on mobile devices</dd>
+    
+                                <dd>- WannaCry, which spread autonomously from computer to computer using EternalBlue, an exploit developed by the NSA and then stolen by hackers.</dd>
+
+                                <dd>- NotPetya, which also used EternalBlue and may have been part of a Russian-directed cyberattack against Ukraine.</dd>
+
+                                <dd>- Locky, which started spreading in 2016, was "similar in its mode of attack to the notorious banking software Dridex."</dd>
+
+                        </dl>
+                    
+                    
+                </p>
+            
+        </div>
+</div>
+
+{% endblock %}

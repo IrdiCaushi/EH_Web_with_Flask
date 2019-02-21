@@ -1,0 +1,42 @@
+.share:hover {
+        text-decoration: none;
+    opacity: 0.8;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 33%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.card {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+    height: 350px;
+  }
+
+.card-img-top {
+    height: 131px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+} 

@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+{% block body %}
+    
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+
+  <!-- The Hacker Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Hacker</h2>
+    <p class="w3-opacity"><i>Types of Hackers</i></p>
+    <p class="w3-justify">"While this term originally referred to a clever or expert programmer, it is now more commonly used to refer to someone who can gain unauthorized access to other computers. A hacker can "hack" his or her way through the security levels of a computer system or network."</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>White Hat</p>
+        <img src="{{url_for('static', filename='White_Hat.jpg')}}" class="w3-round w3-margin-bottom" alt="White Hat Hacker" style="width:60% ; height:220px">
+        <p style="width:60%; margin-left: 50px">A white hat hacker is a computer security specialist who breaks into protected systems and networks to test and asses their security.</p>
+      </div>
+      <div class="w3-third">
+        <p>Grey Hat</p>
+        <img src="{{url_for('static', filename='Grey_Hat.jpg')}}" class="w3-round w3-margin-bottom" alt="Grey Hat Hacker" style="width:60%; height:220px">
+        <p style="width:60%; margin-left: 50px">Refers to a computer hacker or computer security expert who may sometimes violate laws or typical ethical standards, but does not have the malicious intent typical of a black hat hacker.</p>
+      </div>
+      <div class="w3-third">
+        <p>Black Hat</p>
+        <img src="{{url_for('static', filename='Black_Hat.jpg')}}" class="w3-round w3-margin-bottom" alt="Black Hat Hacker" style="width:60%; height:220px;">
+        <p style="width:60%; margin-left: 50px">A black hat hacker is a person who attempts to find computer security vulnerabilities and exploit them for personal financial gain or other malicious reasons.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cyber attack trends -->
+  <div class="w3-black" id="stats">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Top 3 Cyber Attacks Trends in 2019</h2>
+      <p class="w3-opacity w3-center"><i>Protect yourself!</i></p><br>
+
+    <!--Card section-->
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                    <img class="card-img-top" src="{{url_for('static', filename='bio.jpg')}}" alt="Card image" >
+                    <div class="card-body">
+                      <h4 class="card-title" style="color:black">Biometric Data</h4>
+                      <p class="card-text" style="color:black">"As more biometric systems for user identification and authentication are being implemented by...</p>
+                      <a href="http://localhost:5000/biodata" class="btn btn-primary">Read More...</a>
+                    </div>
+            </div>
+        </div>
+            
+        <div class="column">
+             <div class="card">
+                    <img class="card-img-top" src="{{url_for('static', filename='AI.jpg')}}" alt="Card image" >
+                    <div class="card-body">
+                      <h4 class="card-title" style="color:black">AI Attack</h4>
+                      <p class="card-text" style="color:black">"I believe we will see an increase in attackers utilising AI and machine learning as a means...</p>
+                      <a href="http://localhost:5000/aidata" class="btn btn-primary">Read More...</a>
+                    </div>
+            </div>
+        </div>
+           
+        <div class="column">
+            <div class="card" >
+                    <img class="card-img-top" src="{{url_for('static', filename='phishing.jpg')}}" alt="Card image">
+                    <div class="card-body">
+                      <h4 class="card-title" style="color:black">Phishing scams</h4>
+                      <p class="card-text" style="color:black">"Phishing techniques like the use of homoglyphs, elongated URLs, legitimate certifications ...</p>
+                      <a href="http://localhost:5000/phishing" class="btn btn-primary">Read More...</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </div>     
+    </div>
+</div>
+
+
+{{ super() }}
+{% endblock %}
